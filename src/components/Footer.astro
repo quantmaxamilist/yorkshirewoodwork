@@ -1,0 +1,62 @@
+---
+import Icon from './Icon.astro';
+import Seal from './Seal.astro';
+import { nav, site } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__cta">
+      <div>
+        <p class="stamp text-honey mb-5">Bespoke commissions</p>
+        <p class="h-lg max-w-[16ch]">Planning a piece or a project?</p>
+      </div>
+      <div class="flex flex-col gap-4 items-start">
+        <a href="/contact/#enquire" class="btn btn--light">Book a free site visit <Icon name="arrow" size={18} /></a>
+        <a href={site.mobileHref} class="stamp stamp--lg link-u">{site.mobile}</a>
+      </div>
+    </div>
+    <div class="ruler ruler--light my-14"></div>
+    <div class="ftr__grid">
+      <div class="flex items-start gap-5">
+        <img src="/img/logo.webp" alt="Yorkshire Woodwork logo" width="96" height="90" class="rounded-[3px] w-20 h-auto" loading="lazy" />
+        <div>
+          <p class="font-serif text-2xl leading-none m-0">Yorkshire Woodwork</p>
+          <p class="stamp mt-2 opacity-60">{site.tagline}</p>
+          <p class="muted text-sm mt-4 max-w-[30ch]">Bespoke handmade furniture and joinery, made by hand in our small workshop in West Yorkshire.</p>
+        </div>
+      </div>
+      <nav aria-label="Footer">
+        <p class="stamp opacity-50 mb-4">Explore</p>
+        <ul class="list-none m-0 p-0 grid gap-2">
+          {nav.map((n) => <li><a href={n.href} class="link-u">{n.label}</a></li>)}
+        </ul>
+      </nav>
+      <div>
+        <p class="stamp opacity-50 mb-4">Contact</p>
+        <ul class="list-none m-0 p-0 grid gap-2">
+          <li><a href={site.mobileHref} class="link-u">{site.mobile}</a></li>
+          <li><a href={site.landlineHref} class="link-u">{site.landline}</a></li>
+          <li><a href={`mailto:${site.email}`} class="link-u break-all">{site.email}</a></li>
+        </ul>
+      </div>
+      <Seal size={124} class="text-moss hidden lg:block justify-self-end" />
+    </div>
+    <div class="ftr__legal">
+      <span>© {year} {site.legal}</span>
+      <span class="flex gap-5"><a href="/privacy/" class="link-u">Privacy</a><a href="/credits/" class="link-u">Photo credits</a></span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .ftr { background: var(--char); color: var(--paper); padding: clamp(72px, 9vw, 120px) 0 30px; }
+  .ftr .muted { color: rgba(246,241,231,.62); }
+  .ftr__cta { display: grid; gap: 34px; align-items: end; }
+  .ftr__grid { display: grid; gap: 40px; }
+  .ftr__legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 64px; padding-top: 22px; border-top: 1px solid rgba(246,241,231,.14); font-size: .85rem; opacity: .65; }
+  @media (min-width: 860px) {
+    .ftr__cta { grid-template-columns: 1fr auto; }
+    .ftr__grid { grid-template-columns: 1.6fr 1fr 1.2fr auto; }
+  }
+</style>

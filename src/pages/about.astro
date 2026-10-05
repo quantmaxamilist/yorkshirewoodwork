@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import Seal from '../components/Seal.astro';
+import { intro, george, reviews } from '../data/site';
+---
+<Base title="About Yorkshire Woodwork | Proper Yorkshire Joinery" description="Yorkshire Woodwork is a small but rapidly growing brand specialising in proper Yorkshire joinery and bespoke handmade furniture, made by hand in West Yorkshire. Meet George King, Director.">
+  <PageHead kicker="About us" title="Proper Yorkshire joinery." lead={intro.lead} />
+
+  <section class="pb-[clamp(72px,10vw,140px)]">
+    <div class="wrap grid gap-12 lg:grid-cols-2 items-center">
+      <div class="frame aspect-[4/3]" data-reveal="clip"><img src="/img/stock/timber-air-drying.webp" alt="Stacked timber boards" width="1800" height="1200" /></div>
+      <div data-reveal>
+        <p class="lede">{intro.body}</p>
+        <p class="lede muted mt-6">Please get in touch to see how we can bring proper Yorkshire joinery to you.</p>
+        <div class="flex items-center gap-6 mt-10"><Seal size={110} class="text-forest" /><a href="/shop/" class="btn btn--ghost">Visit the shop <Icon name="arrow" size={18} /></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--dark">
+    <div class="wrap grid gap-12 lg:grid-cols-[1fr_1.2fr] items-center">
+      <div class="frame aspect-[6/5]" data-reveal><img src={george.image} alt="George King, Director" loading="lazy" width="1200" height="1030" /></div>
+      <div data-reveal>
+        <p class="stamp kicker text-honey">Meet the team</p>
+        <h2 class="h-lg">{george.name}</h2>
+        <p class="stamp mt-3 text-honey">{george.role}</p>
+        <p class="font-serif text-[clamp(1.4rem,2.4vw,2rem)] leading-snug mt-8">“{george.quote}”</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap grid gap-12 lg:grid-cols-2 items-center">
+      <div data-reveal>
+        <p class="stamp kicker text-forest">Our cricket bat brand</p>
+        <h2 class="h-lg">Yorkshire Willow.</h2>
+        <p class="lede muted mt-6">Offering handmade English willow cricket bats as well as a full selection of bat repairs and maintenance.</p>
+        <a href="/yorkshire-willow/" class="btn btn--moss mt-8">Learn more <Icon name="arrow" size={18} /></a>
+      </div>
+      <div class="frame aspect-[4/3] !bg-[#0D120B] grid place-items-center" data-reveal><img src="/img/willow/yorkshire-willow-logo.webp" alt="Yorkshire Willow logo" class="!w-1/2 !h-auto" loading="lazy" width="709" height="678" /></div>
+    </div>
+  </section>
+
+  <section class="sec sec--sawdust">
+    <div class="wrap grid gap-8 md:grid-cols-2">
+      {reviews.map((r) => (
+        <blockquote class="m-0 bg-paper p-8" data-reveal>
+          <Icon name="quote" size={28} class="text-oak" />
+          <p class="text-lg leading-relaxed my-4">{r.quote}</p>
+          <footer class="font-serif text-xl">{r.name}</footer>
+        </blockquote>
+      ))}
+    </div>
+  </section>
+</Base>

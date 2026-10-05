@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import EnquiryForm from '../components/EnquiryForm.astro';
+import { process, projects, craft, george, site } from '../data/site';
+const offers = [
+  { icon: 'dovetail', title: 'Bespoke furniture', text: 'One-off pieces designed around you — from bedside tables and desks to dining sets, built in solid timber.' },
+  { icon: 'home', title: 'Kitchens & interiors', text: 'Kitchen installs with solid oak worktops, oak cladding and shaker style wall panelling.' },
+  { icon: 'oak', title: 'Outdoor joinery', text: 'Outdoor kitchens, benches and tables in solid British oak, made to stand up to the weather.' },
+  { icon: 'ruler', title: 'Made to measure', text: 'Shelving, coat hooks, console tables and more — sized to fit your space exactly.' },
+];
+---
+<Base title="Bespoke Joinery & Custom Furniture | Free Site Visit | Yorkshire Woodwork" description="Bespoke joinery and one-off handmade furniture from Yorkshire Woodwork — kitchens, oak cladding and panelling, outdoor kitchens and custom pieces. Book a free site visit.">
+  <PageHead kicker="Bespoke commissions" title="Your ideas, made in solid timber." lead="We love nothing more than bringing your ideas to life with one-off custom pieces. Every job starts with a free site visit." image="/img/stock/workshop-tool-wall.webp">
+    <div class="flex flex-wrap gap-3 mt-10">
+      <a href="#enquire" class="btn btn--light">Book a free site visit <Icon name="arrow" size={18} /></a>
+      <a href="/work/" class="btn btn--outline-light">See our work</a>
+    </div>
+  </PageHead>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+        {offers.map((o, i) => (
+          <article data-reveal style={`transition-delay:${i * 90}ms`} class="border-t border-char pt-6">
+            <Icon name={o.icon} size={34} class="text-oak" />
+            <h2 class="h-md mt-6 mb-3 !text-[1.6rem]">{o.title}</h2>
+            <p class="muted m-0">{o.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--sawdust">
+    <div class="wrap">
+      <div class="max-w-[640px] mb-14" data-reveal>
+        <p class="stamp kicker text-oak">The process</p>
+        <h2 class="h-lg">How it works.</h2>
+      </div>
+      <ol class="list-none m-0 p-0 grid gap-px bg-[rgba(23,18,13,.14)] md:grid-cols-2 lg:grid-cols-4">
+        {process.map((s, i) => (
+          <li class="bg-sawdust p-7 lg:p-8 lg:min-h-[290px] flex flex-col" data-reveal style={`transition-delay:${i * 110}ms`}>
+            <span class="stamp stamp--lg text-oak">{s.n}</span>
+            <h3 class="h-md mt-auto pt-10 mb-3">{s.title}</h3>
+            <p class="muted m-0">{s.text}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap grid gap-12 lg:grid-cols-2 items-center">
+      <div class="frame aspect-[16/10]" data-reveal="clip"><img src={projects[1].image} alt={projects[1].title} loading="lazy" width="1512" height="1512" /></div>
+      <div data-reveal>
+        <p class="stamp kicker text-oak">Recent project</p>
+        <h2 class="h-lg">{projects[1].title}</h2>
+        <p class="lede muted mt-6">{projects[1].text}</p>
+        <a href="/work/" class="btn btn--ghost mt-8">All projects <Icon name="arrow" size={18} /></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--sawdust">
+    <div class="wrap grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {craft.map((c) => (
+        <article class="zoom" data-reveal>
+          <div class="frame aspect-[4/3]"><img src={c.image} alt={c.title} loading="lazy" width="1400" height="933" /></div>
+          <h3 class="font-serif text-xl mt-4 mb-2">{c.title}</h3>
+          <p class="muted text-[.95rem] m-0">{c.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="sec sec--dark" id="enquire">
+    <div class="wrap grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+      <div>
+        <p class="stamp kicker text-honey">Free site visit</p>
+        <h2 class="h-lg">Tell us what you have in mind.</h2>
+        <p class="muted mt-6">“{george.quote}”</p>
+        <p class="stamp mt-3 text-honey">{george.name} · {george.role}</p>
+        <div class="mt-10 grid gap-2">
+          <a href={site.mobileHref} class="stamp stamp--lg link-u w-fit">{site.mobile}</a>
+          <a href={site.landlineHref} class="stamp stamp--lg link-u w-fit">{site.landline}</a>
+        </div>
+      </div>
+      <EnquiryForm dark type="Free site visit" />
+    </div>
+  </section>
+</Base>

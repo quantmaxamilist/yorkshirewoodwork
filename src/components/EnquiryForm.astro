@@ -1,0 +1,55 @@
+---
+import Icon from './Icon.astro';
+import { products } from '../data/site';
+interface Props { dark?: boolean; product?: string; type?: string }
+const { dark = false, product = '', type = '' } = Astro.props;
+const key = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? '';
+const types = ['Free site visit', 'Bespoke furniture', 'Kitchen / joinery project', 'Order from the shop', 'Cricket bat / repair', 'Something else'];
+const preset = type || (product ? 'Order from the shop' : 'Free site visit');
+---
+<form class:list={['enq grid gap-7 sm:grid-cols-2', { 'text-paper': dark }]} data-enq data-key={key} novalidate>
+  <input type="hidden" name="from_name" value="Yorkshire Woodwork website" />
+  <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" />
+  <div class="field"><label for="e-name">Name</label><input id="e-name" name="name" required autocomplete="name" /></div>
+  <div class="field"><label for="e-email">Email</label><input id="e-email" name="email" type="email" required autocomplete="email" /></div>
+  <div class="field"><label for="e-phone">Phone</label><input id="e-phone" name="phone" type="tel" autocomplete="tel" /></div>
+  <div class="field">
+    <label for="e-type">Enquiry</label>
+    <select id="e-type" name="enquiry">
+      {types.map((t) => <option selected={t === preset}>{t}</option>)}
+    </select>
+  </div>
+  <div class="field sm:col-span-2">
+    <label for="e-product">Product (if ordering)</label>
+    <input id="e-product" name="product" value={product} list="product-list" placeholder="e.g. Solid Oak Garden Bench" />
+    <datalist id="product-list">{products.map((p) => <option value={p.name} />)}</datalist>
+  </div>
+  <div class="field sm:col-span-2"><label for="e-msg">Tell us about your project</label><textarea id="e-msg" name="message" placeholder="Sizes, finish, timber, where you’re based…"></textarea></div>
+  <div class="sm:col-span-2 flex flex-wrap items-center gap-5">
+    <button class:list={['btn', { 'btn--light': dark }]} type="submit">Send enquiry <Icon name="arrow" size={18} /></button>
+    <p class="m-0 text-sm" data-status role="status" aria-live="polite"></p>
+  </div>
+</form>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-enq]').forEach((form) => {
+    const status = form.querySelector<HTMLElement>('[data-status]')!;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) { status.textContent = 'Please add your name and a valid email.'; return; }
+      const key = form.dataset.key;
+      if (!key) { status.textContent = 'Online enquiries aren’t switched on yet — please call 07470 443001 or email George@yorkshirewoodworkltd.com.'; return; }
+      const data = Object.fromEntries(new FormData(form).entries());
+      status.textContent = 'Sending…';
+      try {
+        const r = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ access_key: key, subject: `Website enquiry — ${data.enquiry}`, ...data }),
+        });
+        const j = await r.json();
+        if (!j.success) throw new Error();
+        form.reset(); status.textContent = 'Thanks — your enquiry has been sent. We’ll be in touch soon.';
+      } catch { status.textContent = 'Sorry, something went wrong. Please call 07470 443001.'; }
+    });
+  });
+</script>

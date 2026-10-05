@@ -1,0 +1,295 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Seal from '../components/Seal.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { site, intro, projects, products, craft, finishes, process, reviews, willow, george } from '../data/site';
+const featured = ['solid-oak-drawer-set', 'floating-oak-bedside-table', 'solid-oak-garden-bench', 'oak-bar-stool', 'solid-oak-fold-down-desk', 'solid-walnut-chopping-board', 'live-edge-oak-console-table', 'solid-oak-candle-holders']
+  .map((s) => products.find((p) => p.slug === s)!);
+const paths = [
+  { n: '01', title: 'Bespoke furniture & joinery', text: 'One-off pieces and fitted joinery, from kitchens to outdoor builds — starting with a free site visit.', href: '/bespoke/', img: '/img/projects/howdens-kitchen.webp', cta: 'Commission a piece' },
+  { n: '02', title: 'The workshop shop', text: 'Some of our most popular pieces, made by hand to order — bedside tables, benches, boards and more.', href: '/shop/', img: '/img/products/oak-bedside-table-with-drawer-1.webp', cta: 'Browse the shop' },
+  { n: '03', title: 'Yorkshire Willow', text: 'Handmade English willow cricket bats, plus repairs and refurbishments.', href: '/yorkshire-willow/', img: '/img/willow/bat-refurb.webp', cta: 'Visit Yorkshire Willow' },
+];
+---
+<Base
+  overlay
+  title="Yorkshire Woodwork | Bespoke Joinery & Handmade Furniture, West Yorkshire"
+  description="Proper Yorkshire joinery. Bespoke handmade furniture, kitchens and joinery made by hand in our small West Yorkshire workshop. Book a free site visit."
+>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="/img/stock/hand-plane-shavings.webp" alt="" class="hero__img" width="2400" height="1600" fetchpriority="high" />
+    <div class="hero__shade"></div>
+    <div class="wrap hero__in">
+      <p class="stamp text-honey kicker hero__k">Bespoke joinery · {site.region}</p>
+      <h1 class="h-xl hero__h"><span class="line"><span>Proper</span></span> <span class="line"><span>Yorkshire</span></span> <span class="line"><span><em class="oak">joinery.</em></span></span></h1>
+      <p class="lede hero__p">Bespoke handmade furniture and joinery, created by hand in our small workshop in West Yorkshire.</p>
+      <div class="hero__ctas">
+        <a href="/contact/#enquire" class="btn btn--light">Book a free site visit <Icon name="arrow" size={18} /></a>
+        <a href="/shop/" class="btn btn--outline-light">Shop the workshop</a>
+      </div>
+    </div>
+    <div class="hero__foot wrap">
+      <div class="ruler ruler--light"></div>
+      <div class="hero__meta">
+        <span class="stamp">Solid oak · Walnut · English willow</span>
+        <span class="stamp hidden sm:inline">Scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="sec">
+    <div class="wrap grid gap-12 lg:grid-cols-[1.35fr_1fr] items-start">
+      <div data-reveal>
+        <p class="stamp kicker text-oak">The workshop</p>
+        <p class="h-lg">{intro.lead}</p>
+      </div>
+      <div class="lg:pt-24" data-reveal>
+        <p class="lede muted">{intro.body}</p>
+        <div class="flex items-center gap-6 mt-10">
+          <Seal size={118} class="text-forest shrink-0" />
+          <a href="/about/" class="btn btn--ghost">About us <Icon name="arrow" size={18} /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE PATHS -->
+  <section class="pb-[clamp(72px,10vw,140px)]">
+    <div class="wrap grid gap-6 md:grid-cols-3">
+      {paths.map((p, i) => (
+        <a href={p.href} class="path zoom" data-reveal style={`transition-delay:${i * 110}ms`}>
+          <div class="frame aspect-[4/5]"><img src={p.img} alt="" loading="lazy" width="1200" height="1500" /></div>
+          <div class="path__body">
+            <span class="stamp opacity-60">{p.n}</span>
+            <h2 class="h-md mt-3 mb-3">{p.title}</h2>
+            <p class="muted m-0">{p.text}</p>
+            <span class="path__cta">{p.cta} <Icon name="arrowUpRight" size={18} /></span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- PROJECTS STRIP -->
+  <section class="sec sec--dark">
+    <div class="wrap flex flex-wrap items-end justify-between gap-6 mb-12">
+      <div data-reveal>
+        <p class="stamp kicker text-honey">Our work</p>
+        <h2 class="h-lg max-w-[16ch]">Kitchens, cladding & outdoor builds in solid oak.</h2>
+      </div>
+      <a href="/work/" class="btn btn--outline-light" data-reveal>See the projects <Icon name="arrow" size={18} /></a>
+    </div>
+    <div class="strip wrap !pr-0" data-strip>
+      {projects.map((p) => (
+        <a href={`/work/#${p.slug}`} class="proj zoom">
+          <div class="frame proj__img"><img src={p.image} alt={p.title} width={p.w} height={p.h} loading="lazy" draggable="false" /></div>
+          <div class="flex items-baseline justify-between gap-4 mt-5">
+            <h3 class="h-md m-0">{p.title}</h3>
+            <span class="stamp opacity-60 shrink-0">{p.tag}</span>
+          </div>
+          <p class="muted mt-2 mb-0 max-w-[52ch] text-[.95rem]">{p.features.join(' · ')}</p>
+        </a>
+      ))}
+      <div class="w-[1px]"></div>
+    </div>
+    <p class="wrap stamp opacity-40 mt-8 hidden md:block">Drag to explore →</p>
+  </section>
+
+  <!-- SHOP PREVIEW -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+        <div data-reveal>
+          <p class="stamp kicker text-oak">From the workshop</p>
+          <h2 class="h-lg max-w-[18ch]">Handmade pieces, ready to order.</h2>
+        </div>
+        <a href="/shop/" class="btn btn--ghost" data-reveal>All {products.length} pieces <Icon name="arrow" size={18} /></a>
+      </div>
+      <div class="grid gap-x-6 gap-y-12 grid-cols-2 lg:grid-cols-4">
+        {featured.map((p, i) => <div data-reveal style={`transition-delay:${(i % 4) * 80}ms`}><ProductCard p={p} /></div>)}
+      </div>
+      <p class="muted text-sm mt-10">Hover a piece to see its timber and dimensions. Most sizes can be changed to suit you.</p>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="ruler"></div></div>
+
+  <!-- CRAFT -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="grid gap-10 lg:grid-cols-[1fr_1.2fr] mb-16">
+        <div data-reveal>
+          <p class="stamp kicker text-oak">Made properly</p>
+          <h2 class="h-lg">The details that make it last.</h2>
+        </div>
+        <p class="lede muted lg:pt-14" data-reveal>Solid timber, real joints and finishes chosen for how a piece will be used — the same things you’ll find written into every one of our product descriptions.</p>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {craft.map((c, i) => (
+          <article class="zoom" data-reveal style={`transition-delay:${i * 90}ms`}>
+            <div class="frame aspect-square"><img src={c.image} alt={c.title} loading="lazy" width="1400" height="933" /></div>
+            <h3 class="font-serif text-xl mt-5 mb-2">{c.title}</h3>
+            <p class="muted text-[.95rem] m-0">{c.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FINISH EXPLORER -->
+  <section class="sec sec--sawdust">
+    <div class="wrap grid gap-12 lg:grid-cols-2 items-center">
+      <div data-reveal>
+        <p class="stamp kicker text-oak">Finishes</p>
+        <h2 class="h-lg mb-8">Choose how your piece is finished.</h2>
+        <div class="fx" role="tablist" aria-label="Finishes">
+          {finishes.map((f, i) => (
+            <button role="tab" class="fx__tab" aria-selected={i === 0 ? 'true' : 'false'} aria-controls="fx-panel" data-fx={i}>
+              <span class="fx__n stamp">0{i + 1}</span>
+              <span class="fx__name">{f.name}</span>
+              <span class="fx__note">{f.note}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div class="frame aspect-[4/5] lg:aspect-[5/6]" id="fx-panel" role="tabpanel" data-reveal="clip">
+        {finishes.map((f, i) => <img src={f.image} alt={`${f.name} finish`} class:list={['fx__img', { on: i === 0 }]} loading="lazy" width="1050" height="1400" />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="sec sec--dark relative overflow-hidden">
+    <img src="/img/stock/marking-out.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-[.16]" loading="lazy" />
+    <div class="wrap relative">
+      <div class="max-w-[640px] mb-16" data-reveal>
+        <p class="stamp kicker text-honey">How a bespoke job works</p>
+        <h2 class="h-lg">From your space to the finished piece.</h2>
+      </div>
+      <ol class="steps list-none m-0 p-0">
+        {process.map((s, i) => (
+          <li class="step" data-reveal style={`transition-delay:${i * 120}ms`}>
+            <span class="stamp text-honey step__n">{s.n}</span>
+            <h3 class="h-md mt-5 mb-3">{s.title}</h3>
+            <p class="muted m-0">{s.text}</p>
+          </li>
+        ))}
+      </ol>
+      <div class="mt-14" data-reveal><a href="/contact/#enquire" class="btn btn--light">Book your free site visit <Icon name="arrow" size={18} /></a></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS + GEORGE -->
+  <section class="sec">
+    <div class="wrap grid gap-14 lg:grid-cols-[1fr_1.15fr] items-center">
+      <figure class="m-0" data-reveal>
+        <div class="frame aspect-[5/4]"><img src={george.image} alt="George King, Director of Yorkshire Woodwork" loading="lazy" width="1200" height="1030" /></div>
+        <figcaption class="mt-6">
+          <p class="font-serif text-2xl leading-snug m-0">“{george.quote}”</p>
+          <p class="stamp mt-4 text-oak">{george.name} · {george.role}</p>
+        </figcaption>
+      </figure>
+      <div>
+        <p class="stamp kicker text-oak" data-reveal>Customer reviews</p>
+        <div class="grid gap-6">
+          {reviews.map((r, i) => (
+            <blockquote class="review" data-reveal style={`transition-delay:${i * 120}ms`}>
+              <Icon name="quote" size={30} class="text-oak" />
+              <p class="text-lg leading-relaxed mt-3 mb-5">{r.quote}</p>
+              <footer class="flex items-center justify-between gap-4"><span class="font-serif text-xl">{r.name}</span><span class="stamp opacity-60">{r.context}</span></footer>
+            </blockquote>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YORKSHIRE WILLOW -->
+  <section class="willow">
+    <div class="wrap grid gap-12 lg:grid-cols-[1fr_1fr] items-center">
+      <div data-reveal>
+        <img src="/img/willow/yorkshire-willow-logo.webp" alt="Yorkshire Willow" width="709" height="678" class="w-28 h-auto mb-8" loading="lazy" />
+        <p class="stamp text-willow mb-4">New to the market</p>
+        <h2 class="h-lg">Yorkshire Willow cricket bats.</h2>
+        <p class="lede mt-6 opacity-80">{willow.intro}</p>
+        <ul class="flex flex-wrap gap-2 list-none p-0 my-8">
+          {['Grade 1 English willow', 'Duck bill toe', '38–40mm edges', 'Repairs & regrips'].map((t) => <li class="chip">{t}</li>)}
+        </ul>
+        <a href="/yorkshire-willow/" class="btn btn--moss">Visit Yorkshire Willow <Icon name="arrow" size={18} /></a>
+      </div>
+      <div class="grid grid-cols-2 gap-5" data-reveal>
+        <div class="frame aspect-[3/5]"><img src="/img/products/handmade-cricket-bat-1.webp" alt="Handmade English willow cricket bat" loading="lazy" width="466" height="540" /></div>
+        <div class="frame aspect-[3/5] mt-12"><img src="/img/willow/bat-refurb.webp" alt="Refurbished cricket bats" loading="lazy" width="800" height="800" /></div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; color: var(--paper); overflow: hidden; background: var(--char); }
+  .hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; transform: scale(1.08); animation: heroIn 2.4s var(--ease) forwards; }
+  @keyframes heroIn { to { transform: scale(1); } }
+  .hero__shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(23,18,13,.88) 0%, rgba(23,18,13,.55) 45%, rgba(23,18,13,.15) 100%), linear-gradient(0deg, rgba(23,18,13,.7) 0%, transparent 40%); }
+  .hero__in { position: relative; padding-top: calc(var(--hdr) + 60px); padding-bottom: 40px; }
+  .hero__h { max-width: 10ch; }
+  .hero__h .line { display: block; overflow: hidden; padding-bottom: .04em; }
+  .hero__h .line > span { display: inline-block; transform: translateY(105%); animation: rise 1.1s var(--ease) forwards; }
+  .hero__h .line:nth-child(2) > span { animation-delay: .12s; }
+  .hero__h .line:nth-child(3) > span { animation-delay: .24s; }
+  @keyframes rise { to { transform: none; } }
+  .hero__k, .hero__p, .hero__ctas { opacity: 0; animation: fade 1s var(--ease) .55s forwards; }
+  .hero__p { max-width: 34ch; margin: 28px 0 34px; opacity: 0; }
+  .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; animation-delay: .7s; }
+  @keyframes fade { to { opacity: 1; } }
+  .hero__foot { position: relative; padding-bottom: 22px; }
+  .hero__meta { display: flex; justify-content: space-between; margin-top: 12px; opacity: .75; }
+  @media (prefers-reduced-motion: reduce) { .hero__img, .hero__h .line > span, .hero__k, .hero__p, .hero__ctas { animation: none; opacity: 1; transform: none; } }
+
+  .path { display: block; text-decoration: none; color: inherit; }
+  .path__body { padding: 22px 0 0; }
+  .path__cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-weight: 700; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; border-bottom: 1px solid currentColor; padding-bottom: 4px; }
+
+  .proj { width: min(78vw, 760px); text-decoration: none; color: inherit; }
+  .proj__img { aspect-ratio: 16 / 10; }
+
+  .fx { display: grid; border-top: 1px solid var(--line); }
+  .fx__tab { display: grid; grid-template-columns: 44px 1fr; align-items: baseline; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line); padding: 18px 0; cursor: pointer; color: inherit; font: inherit; }
+  .fx__name { font-family: 'Gloock', serif; font-size: 1.45rem; transition: color .3s; }
+  .fx__note { grid-column: 2; font-size: .95rem; color: rgba(23,18,13,.66); max-height: 0; overflow: hidden; transition: max-height .5s var(--ease), margin .5s var(--ease); }
+  .fx__tab[aria-selected='true'] .fx__name { color: var(--oak); }
+  .fx__tab[aria-selected='true'] .fx__note { max-height: 6em; margin-top: 6px; }
+  .fx__n { opacity: .5; }
+  .fx__img { position: absolute; inset: 0; opacity: 0; transition: opacity .7s var(--ease), transform 1.2s var(--ease) !important; transform: scale(1.04); }
+  .fx__img.on { opacity: 1; transform: none; }
+
+  .steps { display: grid; gap: 40px; }
+  .step { border-top: 1px solid rgba(246,241,231,.22); padding-top: 22px; }
+  @media (min-width: 800px) { .steps { grid-template-columns: repeat(4, 1fr); gap: 28px; } }
+
+  .review { margin: 0; padding: 30px; background: #fff; border: 1px solid var(--line); }
+
+  .willow { background: #0D120B; color: var(--paper); padding: clamp(72px, 10vw, 140px) 0; position: relative; overflow: hidden; }
+  .willow::before { content: ''; position: absolute; inset: 0; background: radial-gradient(60% 60% at 80% 40%, rgba(70,160,44,.16), transparent 70%); }
+  .willow .wrap { position: relative; }
+  .chip { border: 1px solid rgba(70,160,44,.6); color: #bfe3b0; padding: 6px 12px; font-size: .82rem; border-radius: 999px; }
+</style>
+
+<script>
+  const tabs = [...document.querySelectorAll<HTMLButtonElement>('[data-fx]')];
+  const imgs = [...document.querySelectorAll<HTMLImageElement>('.fx__img')];
+  const pick = (i: number) => {
+    tabs.forEach((t, k) => t.setAttribute('aria-selected', String(k === i)));
+    imgs.forEach((im, k) => im.classList.toggle('on', k === i));
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => pick(i));
+    t.addEventListener('mouseenter', () => { if (matchMedia('(hover:hover)').matches) pick(i); });
+    t.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); const n = (i + 1) % tabs.length; pick(n); tabs[n].focus(); }
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); const n = (i - 1 + tabs.length) % tabs.length; pick(n); tabs[n].focus(); }
+    });
+  });
+</script>

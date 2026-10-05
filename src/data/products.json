@@ -1,0 +1,938 @@
+[
+ {
+  "slug": "handmade-cricket-bat",
+  "name": "English Willow Cricket Bat",
+  "price": 180,
+  "badge": "New",
+  "cat": "willow",
+  "timber": "Grade 1 English willow",
+  "dims": [
+   [
+    "Weight",
+    "2lb 8oz – 3lb"
+   ],
+   [
+    "Spine",
+    "65–67mm"
+   ],
+   [
+    "Edges",
+    "38–40mm"
+   ],
+   [
+    "Toe",
+    "Duck bill"
+   ]
+  ],
+  "summary": "A custom made, full size, short handle bat with a very large profile — hand crafted in our Yorkshire workshop.",
+  "body": [
+   "A brand new custom made cricket bat with a very large profile, made from the finest Grade 1 English willow. We carefully hand select the willow for the blades, and the finest cane handles.",
+   "Full size, short handle, weighing 2lb 8oz – 3lb — please put your preferred weight in the order notes. Duck bill toe shape, with a spine height of 65–67mm (just fits the new MCC gauge for bat sizes).",
+   "A slightly bowed blade with very thick edges of 38–40mm, and a very small amount of concave shaping to the back to reduce weight while keeping a huge middle. Comes with a factory fitted toe guard.",
+   "All bats need to be oiled and knocked in before use. We can do this for £20 — full machine knocking in, plus a clear anti-scuff sheet fitted with edge tape."
+  ],
+  "options": [
+   "Players Grade — best available, no finer willow",
+   "Grade 1 — lots of straight grains, no imperfections on the face",
+   "Grade 2 — good amount of grains, maybe some small face imperfections"
+  ],
+  "images": [
+   {
+    "src": "/img/products/handmade-cricket-bat-1.webp",
+    "w": 466,
+    "h": 540
+   },
+   {
+    "src": "/img/products/handmade-cricket-bat-2.webp",
+    "w": 457,
+    "h": 540
+   },
+   {
+    "src": "/img/products/handmade-cricket-bat-3.webp",
+    "w": 467,
+    "h": 540
+   }
+  ]
+ },
+ {
+  "slug": "solid-walnut-chopping-board",
+  "name": "Solid Walnut Chopping Board",
+  "price": 55,
+  "badge": "New",
+  "cat": "kitchen",
+  "timber": "Solid walnut",
+  "dims": [
+   [
+    "Size",
+    "450 × 300mm"
+   ],
+   [
+    "Thickness",
+    "40mm"
+   ]
+  ],
+  "summary": "Heavy duty 40mm solid walnut, sealed in butchers block oil and ready to use.",
+  "body": [
+   "Made from 100% solid walnut. These boards are heavy duty, being 40mm thick, so they are built to last. Finished size 450mm by 300mm.",
+   "Sealed in butchers block oil, so it’s ready to use right away. Do not put it in the dishwasher — simply wipe down and re-oil every so often (olive oil works).",
+   "Made with function in mind: no sharp edges, a bull nose radius on the top edge and a deep chamfer underneath so you can get your fingers under the board easily."
+  ],
+  "images": [
+   {
+    "src": "/img/products/solid-walnut-chopping-board-1.webp",
+    "w": 1400,
+    "h": 945
+   }
+  ]
+ },
+ {
+  "slug": "solid-oak-candle-holders",
+  "name": "Solid Oak Candle Holders",
+  "price": 25,
+  "badge": "New",
+  "cat": "kitchen",
+  "timber": "Solid English oak",
+  "dims": [
+   [
+    "Small",
+    "H 9 × 5 × 5cm"
+   ],
+   [
+    "Medium",
+    "H 13 × 5 × 5cm"
+   ],
+   [
+    "Large",
+    "H 16 × 5 × 5cm"
+   ]
+  ],
+  "summary": "An elegant, minimalist trio of tea light holders in solid English oak.",
+  "body": [
+   "An elegant, minimalist trio of solid English oak tea light holders — a lovely new home or anniversary gift. They range from 9cm to 16cm tall and arrive complete with three tea lights.",
+   "Softly sanded so they’re smooth to the touch, with the wood left completely natural. Custom sizes and volume orders are available on request.",
+   "As this item is made from wood and uses candles, please use sensible fire precautions and never leave a burning candle unattended."
+  ],
+  "images": [
+   {
+    "src": "/img/products/solid-oak-candle-holders-1.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/solid-oak-candle-holders-2.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/solid-oak-candle-holders-3.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/solid-oak-candle-holders-4.webp",
+    "w": 1400,
+    "h": 933
+   }
+  ]
+ },
+ {
+  "slug": "oak-house-number",
+  "name": "Oak House Number",
+  "price": 20,
+  "badge": null,
+  "cat": "outdoor",
+  "timber": "Live edge solid oak",
+  "dims": [
+   [
+    "Numbers",
+    "Black iron"
+   ],
+   [
+    "Fixings",
+    "Hidden"
+   ]
+  ],
+  "summary": "Live edge solid oak with black iron numbers — every one totally unique.",
+  "body": [
+   "A solid oak live edge house number. Each one is totally unique, made from a live edge solid oak board with black iron numbers.",
+   "Hidden fixings on the back mean nothing can be seen once it’s on the wall. Please state the house number you’d like when ordering."
+  ],
+  "images": [
+   {
+    "src": "/img/products/oak-house-number-1.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/oak-house-number-2.webp",
+    "w": 1400,
+    "h": 933
+   }
+  ]
+ },
+ {
+  "slug": "floating-oak-bedside-table",
+  "name": "Floating Oak Bedside Table",
+  "price": 220,
+  "badge": "New",
+  "cat": "bedroom",
+  "timber": "Solid oak",
+  "dims": [
+   [
+    "Width",
+    "300mm"
+   ],
+   [
+    "Depth",
+    "300mm"
+   ],
+   [
+    "Height",
+    "180mm"
+   ]
+  ],
+  "summary": "Wall-hung solid oak with full length dovetail joinery and a hidden bracket.",
+  "body": [
+   "A solid oak floating bedside table with drawer, featuring full length dovetail joinery on all sides. It hangs from the wall on a custom made bracket hidden behind the table, so no fixings are visible.",
+   "Finished in your choice of matt, satin or gloss polyurethane varnish to protect it from spills and knocks. The drawer runs on full metal ball-bearing runners.",
+   "If these sizes don’t work, message us and we can make a custom size to suit your requirements."
+  ],
+  "images": [
+   {
+    "src": "/img/products/floating-oak-bedside-table-1.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/floating-oak-bedside-table-2.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/floating-oak-bedside-table-3.webp",
+    "w": 1400,
+    "h": 933
+   }
+  ]
+ },
+ {
+  "slug": "oak-bedside-table-with-drawer",
+  "name": "Oak Bedside Table with Drawer",
+  "price": 275,
+  "badge": "New",
+  "cat": "bedroom",
+  "timber": "Solid oak",
+  "dims": [
+   [
+    "Width",
+    "300mm"
+   ],
+   [
+    "Depth",
+    "300mm"
+   ],
+   [
+    "Height",
+    "650mm"
+   ]
+  ],
+  "summary": "Full length dovetail joinery on hand turned solid oak legs.",
+  "body": [
+   "A solid oak bedside table with drawer, featuring full length dovetail joinery on all sides and standing on solid hand turned oak legs.",
+   "Finished in your choice of matt, satin or gloss polyurethane varnish. The drawer runs on full metal ball-bearing runners for smooth operation.",
+   "If these sizes don’t work, message us and we can make a custom size to suit your requirements."
+  ],
+  "images": [
+   {
+    "src": "/img/products/oak-bedside-table-with-drawer-1.webp",
+    "w": 1400,
+    "h": 1251
+   },
+   {
+    "src": "/img/products/oak-bedside-table-with-drawer-2.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/oak-bedside-table-with-drawer-3.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/oak-bedside-table-with-drawer-4.webp",
+    "w": 1105,
+    "h": 1400
+   }
+  ]
+ },
+ {
+  "slug": "oak-coat-hooks-with-shelf",
+  "name": "Oak Coat Hooks with Shelf",
+  "price": 40,
+  "badge": null,
+  "cat": "lounge",
+  "timber": "Solid white oak",
+  "dims": [
+   [
+    "Hooks",
+    "3 to 7"
+   ],
+   [
+    "Finish",
+    "Matt, satin or gloss"
+   ]
+  ],
+  "summary": "Solid white oak with antique iron hooks and hidden fixings.",
+  "body": [
+   "Bespoke solid wood coat hooks, available with 3 to 7 hooks, made from solid white oak boards. Select your size and put your choice of matt, satin or gloss varnish in the order notes.",
+   "The hooks are antique iron in a bronze/gold colour. Fixings are hidden behind the outside hooks so they don’t spoil the look, and all fixings and fittings are included."
+  ],
+  "images": [
+   {
+    "src": "/img/products/oak-coat-hooks-with-shelf-1.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/oak-coat-hooks-with-shelf-2.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/oak-coat-hooks-with-shelf-3.webp",
+    "w": 1400,
+    "h": 933
+   }
+  ]
+ },
+ {
+  "slug": "industrial-coffee-table",
+  "name": "Industrial Coffee Table",
+  "price": 300,
+  "badge": null,
+  "cat": "lounge",
+  "timber": "Pine & polished steel",
+  "dims": [
+   [
+    "Legs",
+    "Hairpin"
+   ],
+   [
+    "Colours",
+    "Natural · light · medium · dark oak"
+   ]
+  ],
+  "summary": "Natural wood top on steel hairpin legs, in four colour finishes.",
+  "body": [
+   "A solid wood coffee table made from natural wood and metal — pine for the top and polished steel for the legs. Available in natural, light oak, medium oak and dark oak colours, with hairpin legs.",
+   "Every plank has its own colouring and grain, so each table is unique. Built to last far longer than chipboard or MDF, and any scratches can be renewed with minor repairs.",
+   "Installation is simple — just screw the table top to the metal legs. Clean with a damp cloth and keep out of long direct heat, sun or water."
+  ],
+  "images": [
+   {
+    "src": "/img/products/industrial-coffee-table-1.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/industrial-coffee-table-2.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/industrial-coffee-table-3.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/industrial-coffee-table-4.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/industrial-coffee-table-5.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/industrial-coffee-table-6.webp",
+    "w": 1400,
+    "h": 933
+   }
+  ]
+ },
+ {
+  "slug": "live-edge-oak-chopping-board",
+  "name": "Live Edge Oak Chopping Board",
+  "price": 75,
+  "badge": null,
+  "cat": "kitchen",
+  "timber": "Solid oak, live edge",
+  "dims": [
+   [
+    "Finish",
+    "Natural, vegan friendly oil"
+   ],
+   [
+    "Edge",
+    "Live, left natural"
+   ]
+  ],
+  "summary": "One of a kind solid oak with the live edge left as natural as possible.",
+  "body": [
+   "Made from 100% solid oak. Every board is unique and no two are the same — the live edge is left as natural as possible.",
+   "Sealed in a natural, vegan friendly chopping board oil and ready to use. Don’t put it in the dishwasher; wipe down and re-oil every so often (olive oil works)."
+  ],
+  "images": [
+   {
+    "src": "/img/products/live-edge-oak-chopping-board-1.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/live-edge-oak-chopping-board-2.webp",
+    "w": 1400,
+    "h": 933
+   }
+  ]
+ },
+ {
+  "slug": "oak-floating-shelf",
+  "name": "Oak Floating Shelf",
+  "price": 60,
+  "badge": "New",
+  "cat": "lounge",
+  "timber": "Solid English oak",
+  "dims": [
+   [
+    "Depth",
+    "230mm"
+   ],
+   [
+    "Thickness",
+    "25mm"
+   ],
+   [
+    "Length",
+    "400–1000mm"
+   ]
+  ],
+  "summary": "100% solid oak with no metal parts — 230mm deep, lengths from 400mm.",
+  "body": [
+   "A solid oak shelf made 100% of wood with no metal parts at all. 230mm deep and 25mm thick, with a smooth, clean sanded finish. Available in lengths from 400mm to 1000mm, with custom sizes on request.",
+   "Handmade by us using locally sourced, selected timber. Pre-drilled at the back and supplied with all fixings for a solid masonry wall (plasterboard is possible for lightweight items).",
+   "Natural timber can vary in shade and may have knots or small movements with temperature and humidity — we keep this to a minimum by making sure the timber is dry before use."
+  ],
+  "images": [
+   {
+    "src": "/img/products/oak-floating-shelf-1.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/oak-floating-shelf-2.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/oak-floating-shelf-3.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/oak-floating-shelf-4.webp",
+    "w": 1400,
+    "h": 933
+   }
+  ]
+ },
+ {
+  "slug": "solid-oak-chopping-board",
+  "name": "Solid Oak Chopping Board",
+  "price": 49.44,
+  "badge": "Best seller",
+  "cat": "kitchen",
+  "timber": "Solid oak",
+  "dims": [
+   [
+    "Thickness",
+    "40mm"
+   ],
+   [
+    "Finish",
+    "Butchers block oil"
+   ]
+  ],
+  "summary": "Our best seller — heavy duty 40mm solid oak, ready to use.",
+  "body": [
+   "Made from 100% solid oak. These boards are heavy duty, being 40mm thick, so they are built to last.",
+   "Sealed in butchers block oil and ready to use right away. Wipe down and re-oil every so often — no dishwasher.",
+   "A bull nose radius on the top edge and a very deep chamfer underneath, so you can get your fingers under the board without hunting for a specific point."
+  ],
+  "images": [
+   {
+    "src": "/img/products/solid-oak-chopping-board-1.webp",
+    "w": 1400,
+    "h": 1400
+   }
+  ]
+ },
+ {
+  "slug": "solid-oak-fold-down-desk",
+  "name": "Solid Oak Fold Down Desk",
+  "price": 600,
+  "badge": "New",
+  "cat": "lounge",
+  "timber": "Solid oak",
+  "dims": [
+   [
+    "Front",
+    "Chevron panel"
+   ],
+   [
+    "Mount",
+    "Wall fixed"
+   ]
+  ],
+  "summary": "A wall-mounted solid oak desk with a chevron front that folds down.",
+  "body": [
+   "A solid oak floating desk with a chevron style panel on the front. The desk top folds down into a large desk, with open storage at the rear and handy dividers for things like a laptop and pens.",
+   "Solid oak throughout with all metal hardware, fitted to the wall with discreet fixtures. Hand-built to order and available in a range of finishes."
+  ],
+  "images": [
+   {
+    "src": "/img/products/solid-oak-fold-down-desk-1.webp",
+    "w": 630,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-oak-fold-down-desk-2.webp",
+    "w": 630,
+    "h": 1400
+   }
+  ]
+ },
+ {
+  "slug": "solid-oak-door-stop",
+  "name": "Solid Oak Door Stop",
+  "price": 24.99,
+  "badge": "New",
+  "cat": "kitchen",
+  "timber": "Reclaimed air dried green oak",
+  "dims": [
+   [
+    "Small",
+    "250 × 100 × 100mm · 2.4kg"
+   ],
+   [
+    "Large",
+    "350 × 100 × 100mm · 3.4kg"
+   ]
+  ],
+  "summary": "Made from air dried, reclaimed green oak beams with an industrial ring plate.",
+  "body": [
+   "A door stop made from air dried, reclaimed green oak beams — simple, practical and usable inside or out. A great housewarming, wedding or birthday gift.",
+   "Finished in clear matt or satin varnish with a galvanised industrial ring plate in black or steel. Splits, cracks and knots are an intentional part of the character.",
+   "Free shipping to mainland UK. For Northern Ireland and international delivery, please get in touch first."
+  ],
+  "images": [
+   {
+    "src": "/img/products/solid-oak-door-stop-1.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/solid-oak-door-stop-2.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/solid-oak-door-stop-3.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/solid-oak-door-stop-4.webp",
+    "w": 1400,
+    "h": 933
+   }
+  ]
+ },
+ {
+  "slug": "live-edge-oak-console-table",
+  "name": "Live Edge Oak Console Table",
+  "price": 85,
+  "badge": null,
+  "cat": "lounge",
+  "timber": "Live edge oak, bark on",
+  "dims": [
+   [
+    "Legs",
+    "Steel hairpin"
+   ],
+   [
+    "Sizes",
+    "Range of heights & widths"
+   ]
+  ],
+  "summary": "Live edge oak with the bark left on, on raw steel hairpin legs.",
+  "body": [
+   "A console table made from a live edge piece of oak with the bark still on for a fully natural look. Available in a range of heights and widths — it also works as a radiator shelf.",
+   "Finished in a natural varnish to protect it and bring out the grain. Hairpin legs come in raw steel as standard and can be powder coated in a range of colours."
+  ],
+  "images": [
+   {
+    "src": "/img/products/live-edge-oak-console-table-1.webp",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/live-edge-oak-console-table-2.webp",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/live-edge-oak-console-table-3.webp",
+    "w": 1050,
+    "h": 1400
+   }
+  ]
+ },
+ {
+  "slug": "solid-wood-coffee-table",
+  "name": "Solid Wood Coffee Table",
+  "price": 155,
+  "badge": null,
+  "cat": "lounge",
+  "timber": "Solid wood, steel base",
+  "dims": [
+   [
+    "Across",
+    "550mm"
+   ],
+   [
+    "Height",
+    "450mm"
+   ],
+   [
+    "Shape",
+    "Hexagon"
+   ]
+  ],
+  "summary": "A hexagon top on a solid steel hairpin base.",
+  "body": [
+   "A hexagon shaped solid wood coffee table measuring 550mm across and 450mm tall, on a hairpin style base made from solid steel with a clear lacquer.",
+   "The top is raw wood with a clear coat to protect it from spills."
+  ],
+  "images": [
+   {
+    "src": "/img/products/solid-wood-coffee-table-1.webp",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-wood-coffee-table-2.webp",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-wood-coffee-table-3.webp",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-wood-coffee-table-4.webp",
+    "w": 1050,
+    "h": 1400
+   }
+  ]
+ },
+ {
+  "slug": "oak-bar-stool",
+  "name": "Oak Bar Stool",
+  "price": 85,
+  "badge": null,
+  "cat": "lounge",
+  "timber": "Solid British oak & steel",
+  "dims": [
+   [
+    "Top",
+    "Solid British oak"
+   ],
+   [
+    "Legs",
+    "Raw steel, lacquered"
+   ]
+  ],
+  "summary": "Solid British oak tops with rounded corners on raw steel legs.",
+  "body": [
+   "Solid British oak topped stools for your breakfast bar, with rounded off corners for comfort. Finished in a satin clear coat that brings out the grain.",
+   "Raw steel legs with a clear lacquer, and plastic feet so they won’t scratch your floor. Price includes free postage in the UK."
+  ],
+  "images": [
+   {
+    "src": "/img/products/oak-bar-stool-1.webp",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/oak-bar-stool-2.webp",
+    "w": 1049,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/oak-bar-stool-3.webp",
+    "w": 1049,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/oak-bar-stool-4.webp",
+    "w": 1400,
+    "h": 1400
+   }
+  ]
+ },
+ {
+  "slug": "solid-oak-garden-bench",
+  "name": "Solid Oak Garden Bench",
+  "price": 195,
+  "badge": "Best seller",
+  "cat": "outdoor",
+  "timber": "Solid oak sleepers",
+  "dims": [
+   [
+    "Width",
+    "1400mm"
+   ],
+   [
+    "Height",
+    "500mm"
+   ],
+   [
+    "Depth",
+    "400mm"
+   ]
+  ],
+  "summary": "Built from solid oak sleepers to last years of British weather.",
+  "body": [
+   "A garden bench made from solid oak sleepers — one solid piece of garden furniture that will last many years of harsh British weather, naturally weathering to a silver colour outdoors.",
+   "All sizes can be modified to suit you. Free delivery within Yorkshire; outside the area, free collection is welcome or contact us with your postcode for a shipping quote. Please message us before buying to confirm shipping."
+  ],
+  "images": [
+   {
+    "src": "/img/products/solid-oak-garden-bench-1.webp",
+    "w": 1049,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-oak-garden-bench-2.webp",
+    "w": 1049,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-oak-garden-bench-3.webp",
+    "w": 1050,
+    "h": 1400
+   }
+  ]
+ },
+ {
+  "slug": "solid-wood-outdoor-table-and-benches",
+  "name": "Solid Wood Outdoor Table and Benches",
+  "price": 1150,
+  "badge": "New",
+  "cat": "outdoor",
+  "timber": "Solid oak",
+  "dims": [
+   [
+    "Length",
+    "1800mm"
+   ],
+   [
+    "Depth",
+    "850mm"
+   ],
+   [
+    "Height",
+    "800mm"
+   ]
+  ],
+  "summary": "A solid oak outdoor dining set built to stand up to UK weather.",
+  "body": [
+   "A solid oak outdoor dining table and benches, made to stand up to any weather the UK has to offer. Standard size: 1800mm long, 850mm deep and 800mm high.",
+   "All sizes can be changed to suit your needs — message us before buying for a custom size. Left as raw oak or stained to a colour of your choosing. Free delivery to most UK postcodes."
+  ],
+  "images": [
+   {
+    "src": "/img/products/solid-wood-outdoor-table-and-benches-1.webp",
+    "w": 1049,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-wood-outdoor-table-and-benches-2.webp",
+    "w": 1400,
+    "h": 1049
+   },
+   {
+    "src": "/img/products/solid-wood-outdoor-table-and-benches-3.webp",
+    "w": 1049,
+    "h": 1400
+   }
+  ]
+ },
+ {
+  "slug": "solid-oak-bedside-table",
+  "name": "Solid Oak Bedside Table",
+  "price": 110,
+  "badge": "Best seller",
+  "cat": "bedroom",
+  "timber": "Solid oak",
+  "dims": [
+   [
+    "Height",
+    "700mm"
+   ],
+   [
+    "Top",
+    "300mm square"
+   ]
+  ],
+  "summary": "Solid oak on round legs, with the top finished in your choice of colour.",
+  "body": [
+   "A handmade solid oak bedside table on round legs. The oak top can be finished in any of the colours shown, with the edge rounded over for a smooth finish.",
+   "It stands 700mm tall with a 300mm square top, but can be made to any size to suit your needs."
+  ],
+  "images": [
+   {
+    "src": "/img/products/solid-oak-bedside-table-1.webp",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-oak-bedside-table-2.webp",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-oak-bedside-table-3.webp",
+    "w": 1050,
+    "h": 1400
+   }
+  ]
+ },
+ {
+  "slug": "solid-wood-bedside-table-with-shelf",
+  "name": "Solid Wood Bedside Table with Shelf",
+  "price": 299,
+  "badge": null,
+  "cat": "bedroom",
+  "timber": "Oak & pine",
+  "dims": [
+   [
+    "Drawer",
+    "Soft close"
+   ],
+   [
+    "Finish",
+    "Ready to paint"
+   ]
+  ],
+  "summary": "Oak and pine with a soft close drawer — supplied ready to paint.",
+  "body": [
+   "A solid wood bedside table made from a mix of oak and pine, supplied ready for you to paint — or we can paint it in any of the listed colours.",
+   "The drawer uses soft closing runners with a solid metal handle. It can be made to any size — contact us with sizing before ordering."
+  ],
+  "images": [
+   {
+    "src": "/img/products/solid-wood-bedside-table-with-shelf-1.webp",
+    "w": 933,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-wood-bedside-table-with-shelf-2.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/solid-wood-bedside-table-with-shelf-3.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/solid-wood-bedside-table-with-shelf-4.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/solid-wood-bedside-table-with-shelf-5.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/solid-wood-bedside-table-with-shelf-6.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "src": "/img/products/solid-wood-bedside-table-with-shelf-7.webp",
+    "w": 1400,
+    "h": 933
+   }
+  ]
+ },
+ {
+  "slug": "solid-oak-drawer-set",
+  "name": "Solid Oak Drawer Set",
+  "price": 389.89,
+  "badge": null,
+  "cat": "bedroom",
+  "timber": "Solid oak, lime wash",
+  "dims": [
+   [
+    "Drawers",
+    "2, soft close"
+   ],
+   [
+    "Finish",
+    "Lime wash, satin or matt"
+   ]
+  ],
+  "summary": "All real, solid oak — no thin veneer — in a lime wash finish.",
+  "body": [
+   "A solid wood bedside drawer set finished in lime wash oak — a real statement piece, made entirely from solid oak rather than a thin layer of veneer.",
+   "Two drawers below the top on soft close runners. Also available in our satin or matt clear coats to bring out the grain."
+  ],
+  "images": [
+   {
+    "src": "/img/products/solid-oak-drawer-set-1.webp",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-oak-drawer-set-2.webp",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-oak-drawer-set-3.webp",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-oak-drawer-set-4.webp",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-oak-drawer-set-5.webp",
+    "w": 1050,
+    "h": 1400
+   },
+   {
+    "src": "/img/products/solid-oak-drawer-set-6.webp",
+    "w": 1050,
+    "h": 1400
+   }
+  ]
+ }
+]

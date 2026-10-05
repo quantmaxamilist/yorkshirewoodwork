@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import credits from '../../public/img/stock/CREDITS.json';
+---
+<Base title="Photo credits | Yorkshire Woodwork" description="Credits for photography used on this website.">
+  <PageHead kicker="Credits" title="Photo credits." lead="Product and project photography is our own. A few atmospheric workshop images are from Unsplash, credited below." />
+  <section class="pb-28">
+    <ul class="wrap max-w-[760px] list-none p-0 m-0 border-t border-char">
+      {credits.map((c) => <li class="flex flex-wrap justify-between gap-4 py-4 border-b border-[rgba(23,18,13,.14)]"><span>{c.photographer}</span><a href={c.unsplash} class="link-u" rel="noopener" target="_blank">View on Unsplash</a></li>)}
+    </ul>
+  </section>
+</Base>

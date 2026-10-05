@@ -1,0 +1,30 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/projects-8",
+      "destination": "/work/",
+      "permanent": true
+    },
+    {
+      "source": "/meet-the-team",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/services-4",
+      "destination": "/yorkshire-willow/",
+      "permanent": true
+    },
+    {
+      "source": "/product-page/:slug",
+      "destination": "/shop/:slug/",
+      "permanent": true
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import EnquiryForm from '../components/EnquiryForm.astro';
+import { willow, products, price } from '../data/site';
+const bat = products.find((p) => p.slug === 'handmade-cricket-bat')!;
+---
+<Base title="Yorkshire Willow | Handmade English Willow Cricket Bats & Repairs" description="Yorkshire Willow — handmade Grade 1 English willow cricket bats made in Yorkshire, plus bat repairs, regrips, new handles and full refurbishments." image="/img/willow/bat-refurb.webp">
+  <section class="wl-hero">
+    <div class="wrap grid gap-12 lg:grid-cols-[1.1fr_1fr] items-center">
+      <div>
+        <img src="/img/willow/yorkshire-willow-logo.webp" alt="Yorkshire Willow — Proper Yorkshire Cricket Bats" width="709" height="678" class="w-32 h-auto mb-10" />
+        <p class="stamp text-willow mb-5">By Yorkshire Woodwork</p>
+        <h1 class="h-xl !text-[clamp(2.8rem,6.6vw,5.6rem)]">Handmade English willow cricket bats.</h1>
+        <p class="lede mt-8 opacity-80 max-w-[46ch]">{willow.intro}</p>
+        <div class="flex flex-wrap gap-3 mt-10">
+          <a href={`/shop/${bat.slug}/`} class="btn btn--moss">Buy a bat — {price(bat.price)} <Icon name="arrow" size={18} /></a>
+          <a href="#quote" class="btn btn--outline-light">Get a repair quote</a>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 gap-4">
+        {bat.images.map((im, i) => <div class:list={['frame aspect-[2/5] !bg-[#141a12]', { 'mt-14': i === 1 }]} data-reveal style={`transition-delay:${i * 120}ms`}><img src={im.src} alt={`English willow cricket bat ${i + 1}`} width={im.w} height={im.h} /></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wl-dark !pt-0">
+    <div class="wrap">
+      <div class="wl-spec" data-reveal>
+        {bat.dims.map(([k, v]) => <div><span class="stamp text-willow">{k}</span><span class="font-serif text-[clamp(1.4rem,2.6vw,2.2rem)] leading-tight block mt-2">{v}</span></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="max-w-[680px] mb-14" data-reveal>
+        <p class="stamp kicker text-forest">Services</p>
+        <h2 class="h-lg">Bats, repairs & refurbishments.</h2>
+        <p class="lede muted mt-6">{willow.pricing}</p>
+      </div>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        {willow.services.map((s, i) => (
+          <article class="zoom" data-reveal style={`transition-delay:${i * 90}ms`}>
+            <div class="frame aspect-square"><img src={s.image} alt={s.title} loading="lazy" width="800" height="800" /></div>
+            <h3 class="h-md !text-[1.5rem] mt-5 mb-2">{s.title}</h3>
+            <p class="muted m-0">{s.text}</p>
+          </article>
+        ))}
+      </div>
+      <p class="mt-12 muted">{willow.stickers}</p>
+    </div>
+  </section>
+
+  <section class="sec sec--sawdust">
+    <div class="wrap grid gap-12 lg:grid-cols-2">
+      <div data-reveal>
+        <p class="stamp kicker text-forest">Choose your willow</p>
+        <h2 class="h-lg">Three grades.</h2>
+        <p class="muted mt-6">Full size, short handle, with a duck bill toe and a factory fitted toe guard. Knocking in, oiling and a clear anti-scuff sheet with edge tape is available for £20.</p>
+      </div>
+      <ol class="list-none m-0 p-0">
+        {bat.options!.map((o, i) => {
+          const [g, d] = o.split(' — ');
+          return <li class="flex gap-6 py-6 border-b border-[rgba(23,18,13,.16)]" data-reveal><span class="stamp stamp--lg text-forest w-10 shrink-0">0{i + 1}</span><span><span class="h-md block !text-[1.5rem]">{g}</span><span class="muted">{d.charAt(0).toUpperCase() + d.slice(1)}</span></span></li>;
+        })}
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec wl-dark" id="quote">
+    <div class="wrap grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+      <div>
+        <p class="stamp kicker text-willow">Get a quote for work</p>
+        <h2 class="h-lg">Want something not listed?</h2>
+        <p class="opacity-70 mt-6">Detail the work you’d like carried out and we’ll get back to you with some options.</p>
+      </div>
+      <EnquiryForm dark type="Cricket bat / repair" />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .wl-hero { background: #0D120B; color: var(--paper); padding: clamp(60px, 8vw, 110px) 0 clamp(50px, 6vw, 80px); position: relative; overflow: hidden; }
+  .wl-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(50% 60% at 85% 30%, rgba(70,160,44,.2), transparent 70%); }
+  .wl-hero .wrap { position: relative; }
+  .wl-dark { background: #0D120B; color: var(--paper); }
+  .wl-spec { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(70,160,44,.3); border: 1px solid rgba(70,160,44,.3); }
+  .wl-spec > div { background: #0D120B; padding: 26px; }
+  @media (min-width: 800px) { .wl-spec { grid-template-columns: repeat(4, 1fr); } }
+  .btn--moss::before { background: var(--willow); }
+</style>

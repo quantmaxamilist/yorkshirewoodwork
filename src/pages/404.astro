@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+---
+<Base title="Page not found | Yorkshire Woodwork" description="This page could not be found.">
+  <PageHead kicker="404" title="Page not found." lead="That page doesn’t exist — it may have moved when we rebuilt the site.">
+    <div class="flex flex-wrap gap-3 mt-10 mb-20"><a href="/" class="btn">Home <Icon name="arrow" size={18} /></a><a href="/shop/" class="btn btn--ghost">Shop</a></div>
+  </PageHead>
+</Base>

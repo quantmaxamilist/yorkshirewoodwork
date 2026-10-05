@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import EnquiryForm from '../components/EnquiryForm.astro';
+import { site } from '../data/site';
+const ways = [
+  { icon: 'phone', label: 'Mobile', value: site.mobile, href: site.mobileHref },
+  { icon: 'phone', label: 'Workshop', value: site.landline, href: site.landlineHref },
+  { icon: 'mail', label: 'Email', value: site.email, href: `mailto:${site.email}` },
+];
+---
+<Base title="Contact Yorkshire Woodwork | Book a Free Site Visit" description="Get in contact about booking in a free site visit, ordering from the shop or a cricket bat repair. Call 07470 443001 or email George@yorkshirewoodworkltd.com.">
+  <PageHead kicker="Get in touch" title="Book in a free site visit." lead="Thanks for your interest. For more information, get in touch with us — we look forward to hearing from you." />
+
+  <section class="pb-[clamp(72px,10vw,140px)]" id="enquire">
+    <div class="wrap grid gap-14 lg:grid-cols-[1fr_1.5fr]">
+      <ul class="list-none m-0 p-0 border-t border-char">
+        {ways.map((w) => (
+          <li class="border-b border-[rgba(23,18,13,.14)]">
+            <a href={w.href} class="flex items-center gap-5 py-6 no-underline group">
+              <Icon name={w.icon} size={26} class="text-oak shrink-0" />
+              <span class="min-w-0"><span class="stamp block opacity-60 mb-2">{w.label}</span><span class="font-serif text-[clamp(1.2rem,2.2vw,1.7rem)] break-all group-hover:text-oak transition-colors">{w.value}</span></span>
+            </a>
+          </li>
+        ))}
+        <li class="py-6 muted text-sm">Based in West Yorkshire. Bespoke work starts with a free site visit.</li>
+      </ul>
+      <div class="bg-sawdust p-[clamp(24px,4vw,48px)]">
+        <h2 class="h-md mb-8">Send us a message</h2>
+        <EnquiryForm />
+      </div>
+    </div>
+  </section>
+</Base>

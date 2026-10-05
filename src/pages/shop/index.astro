@@ -1,0 +1,63 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHead from '../../components/PageHead.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Icon from '../../components/Icon.astro';
+import { products, categories } from '../../data/site';
+const counts = Object.fromEntries(categories.map((c) => [c.key, c.key === 'all' ? products.length : products.filter((p) => p.cat === c.key).length]));
+---
+<Base title="Shop | Handmade Oak Furniture & Gifts | Yorkshire Woodwork" description="Handmade solid oak bedside tables, benches, shelves, coffee tables, chopping boards and English willow cricket bats — made by hand in our West Yorkshire workshop.">
+  <PageHead kicker="The workshop shop" title="One-of-a-kind, made by hand." lead="Our online shop lists some of our most popular products. Most pieces can be made to a custom size — just ask." />
+
+  <section class="pb-28">
+    <div class="wrap">
+      <div class="filters" role="toolbar" aria-label="Filter by room">
+        {categories.map((c, i) => (
+          <button class="flt" aria-pressed={i === 0 ? 'true' : 'false'} data-flt={c.key}>{c.label}<sup>{counts[c.key]}</sup></button>
+        ))}
+      </div>
+      <div class="grid gap-x-6 gap-y-14 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-12" data-grid>
+        {products.map((p, i) => <div class="cell" data-cat={p.cat}><ProductCard p={p} eager={i < 4} /></div>)}
+      </div>
+
+      <div class="bespoke-box mt-24">
+        <div>
+          <p class="stamp text-oak mb-4">Not quite right?</p>
+          <h2 class="h-md m-0 max-w-[24ch]">We love nothing more than bringing your ideas to life with one-off custom pieces.</h2>
+        </div>
+        <a href="/contact/#enquire" class="btn">Ask about a custom piece <Icon name="arrow" size={18} /></a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .filters { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+  .filters::-webkit-scrollbar { display: none; }
+  .flt { flex: 0 0 auto; background: none; border: 0; padding: 14px 6px; margin-right: 18px; font: 500 1rem/1 'Schibsted Grotesk', sans-serif; color: rgba(23,18,13,.55); cursor: pointer; position: relative; }
+  .flt sup { font-size: .65em; margin-left: 3px; }
+  .flt::after { content: ''; position: absolute; left: 0; right: 0; bottom: -5px; height: 2px; background: var(--oak); transform: scaleX(0); transition: transform .4s var(--ease); }
+  .flt[aria-pressed='true'] { color: var(--char); }
+  .flt[aria-pressed='true']::after { transform: scaleX(1); }
+  .cell { transition: opacity .45s var(--ease), transform .45s var(--ease); }
+  .cell.out { display: none; }
+  .cell.fade { opacity: 0; transform: translateY(14px); }
+  .bespoke-box { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; padding: clamp(28px, 4vw, 48px); background: var(--sawdust); }
+</style>
+
+<script>
+  const btns = [...document.querySelectorAll<HTMLButtonElement>('[data-flt]')];
+  const cells = [...document.querySelectorAll<HTMLElement>('.cell')];
+  const apply = (k: string) => {
+    btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.flt === k)));
+    cells.forEach((c) => {
+      const show = k === 'all' || c.dataset.cat === k;
+      c.classList.toggle('out', !show);
+      if (show) { c.classList.add('fade'); requestAnimationFrame(() => requestAnimationFrame(() => c.classList.remove('fade'))); }
+    });
+    const url = new URL(location.href); if (k === 'all') url.searchParams.delete('room'); else url.searchParams.set('room', k); history.replaceState(null, '', url);
+  };
+  btns.forEach((b) => b.addEventListener('click', () => apply(b.dataset.flt!)));
+  const start = new URLSearchParams(location.search).get('room');
+  if (start && btns.some((b) => b.dataset.flt === start)) apply(start);
+</script>

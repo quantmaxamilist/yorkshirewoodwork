@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { projects, reviews } from '../data/site';
+---
+<Base title="Our Work | Kitchens, Oak Joinery & Outdoor Kitchens | Yorkshire Woodwork" description="Projects by Yorkshire Woodwork — a Howdens kitchen with solid oak worktops, cladding and shaker panelling, a solid British oak outdoor BBQ kitchen, and a full kitchen makeover." image={projects[0].image}>
+  <PageHead kicker="Our work" title="Recent projects." lead="Kitchens, joinery and outdoor builds — designed, made and fitted by Yorkshire Woodwork." />
+
+  {projects.map((p, i) => (
+    <section id={p.slug} class:list={['sec !pt-0', { 'sec--flip': i % 2 }]}>
+      <div class="wrap grid gap-10 lg:gap-16 lg:grid-cols-[1.5fr_1fr] items-center">
+        <div class:list={['frame', p.w > p.h * 1.5 ? 'aspect-[16/8]' : 'aspect-[16/11]', { 'lg:order-2': i % 2 }]} data-reveal="clip">
+          <img src={p.image} alt={p.title} width={p.w} height={p.h} loading={i ? 'lazy' : 'eager'} />
+        </div>
+        <div data-reveal>
+          <p class="stamp text-oak mb-4">0{i + 1} — {p.tag}</p>
+          <h2 class="h-lg">{p.title}</h2>
+          <p class="lede muted mt-6">{p.text}</p>
+          <ul class="list-none m-0 mt-8 p-0 border-t border-[rgba(23,18,13,.14)]">
+            {p.features.map((f) => <li class="flex items-center gap-3 py-3 border-b border-[rgba(23,18,13,.14)]"><Icon name="square" size={18} class="text-oak shrink-0" />{f}</li>)}
+          </ul>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="sec sec--sawdust">
+    <div class="wrap grid gap-8 md:grid-cols-2">
+      {reviews.map((r) => (
+        <blockquote class="m-0 bg-paper p-8" data-reveal>
+          <Icon name="quote" size={28} class="text-oak" />
+          <p class="text-lg leading-relaxed my-4">{r.quote}</p>
+          <footer class="font-serif text-xl">{r.name} <span class="stamp opacity-60 ml-2">{r.context}</span></footer>
+        </blockquote>
+      ))}
+    </div>
+    <div class="wrap mt-14 flex flex-wrap gap-4 items-center justify-between">
+      <h2 class="h-md m-0">Planning a kitchen or joinery project?</h2>
+      <a href="/contact/#enquire" class="btn">Book a free site visit <Icon name="arrow" size={18} /></a>
+    </div>
+  </section>
+</Base>

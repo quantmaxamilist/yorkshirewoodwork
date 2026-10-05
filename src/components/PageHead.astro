@@ -1,0 +1,26 @@
+---
+interface Props { kicker: string; title: string; lead?: string; image?: string; dark?: boolean }
+const { kicker, title, lead, image, dark = false } = Astro.props;
+---
+<section class:list={['phead', { 'phead--img': image, 'phead--dark': dark || image }]}>
+  {image && <img src={image} alt="" class="phead__img" width="1800" height="1200" fetchpriority="high" />}
+  <div class="wrap phead__in">
+    <p class="stamp kicker phead__k">{kicker}</p>
+    <h1 class="h-xl phead__h">{title}</h1>
+    {lead && <p class="lede phead__p">{lead}</p>}
+    <slot />
+  </div>
+</section>
+
+<style>
+  .phead { position: relative; padding: clamp(70px, 9vw, 130px) 0 clamp(50px, 6vw, 80px); overflow: hidden; }
+  .phead--dark { background: var(--char); color: var(--paper); }
+  .phead--img { padding-top: clamp(150px, 16vw, 220px); }
+  .phead__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .38; }
+  .phead--img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23,18,13,.85), rgba(23,18,13,.2)); }
+  .phead__in { position: relative; z-index: 1; }
+  .phead__k { color: var(--oak); }
+  .phead--dark .phead__k { color: var(--honey); }
+  .phead__h { max-width: 14ch; font-size: clamp(2.6rem, 6.4vw, 5.4rem); }
+  .phead__p { max-width: 46ch; margin: 26px 0 0; opacity: .8; }
+</style>
